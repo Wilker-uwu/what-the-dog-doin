@@ -1,14 +1,14 @@
 [package]
 name = "what-the-dog-doin"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "CLI tool to play sounds in random intervals"
 authors = [
-  "ixhbinphoenix <phoenixgames.phoenix13@gmail.com>"
+  "ixhbinphoenix <phoenix@ixhby.dev>"
 ]
 repository = "https://github.com/ixhbinphoenix/what-the-dog-doin"
 categories = ["command-line-utilities"]
-keyword = ["audio"]
+keywords = ["audio"]
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 
