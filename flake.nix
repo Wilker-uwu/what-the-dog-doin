@@ -52,7 +52,7 @@
             homepage = "https://github.com/ixhbinphoenix/what-the-dog-doin";
             license = with licenses; [ asl20 mit ];
             maintainers = [ ];
-            platforms = "x86_64-linux";
+            platforms = [ "x86_64-linux" ];
           };
         };
       });
