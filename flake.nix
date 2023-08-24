@@ -25,6 +25,7 @@
           pkgs = import nixpkgs {
             inherit system overlays;
           };
+          lib = pkgs.lib;
           toolchain = fenix.packages.${system}.minimal.toolchain;
           manifest = (pkgs.lib.importTOML ./Cargo.toml).package;
         in (pkgs.makeRustPlatform {
@@ -41,7 +42,18 @@
             alsa-lib
           ];
 
-          PKG_CONFIG_PATH = "${pkgs.alsa-lib.dev}/lib/pkgconfig"; 
+          PKG_CONFIG_PATH = "${pkgs.alsa-lib.dev}/lib/pkgconfig";
+
+          meta = with lib; {
+            description = "CLI tool to play sounds in random intervals";
+            longDescription = ''
+              what-the-dog-doin is a CLI tool that can play any sound in fully customizable intervals.
+            '';
+            homepage = "https://github.com/ixhbinphoenix/what-the-dog-doin";
+            license = with licenses; [ als20 mit ];
+            maintainers = [ ];
+            platforms = "x86_64-linux";
+          };
         };
       });
 
