@@ -50,7 +50,7 @@
               what-the-dog-doin is a CLI tool that can play any sound in fully customizable intervals.
             '';
             homepage = "https://github.com/ixhbinphoenix/what-the-dog-doin";
-            license = with licenses; [ als20 mit ];
+            license = with licenses; [ asl20 mit ];
             maintainers = [ ];
             platforms = "x86_64-linux";
           };
