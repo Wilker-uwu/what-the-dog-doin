@@ -72,9 +72,9 @@ fn main() {
             match args.delay {
                 Some(a) => a,
                 None => {
-                    return
-                },
                     eprintln!("Delay not specified! Delay has to be specified when using --disable-random");
+                    return
+                }
             }
         };
         std::thread::sleep(Duration::from_secs(delay));
