@@ -11,11 +11,11 @@ struct Args {
     /// Audio file to be played
     file: String, 
 
-    /// Minimum amount of delay
+    /// Minimum amount of delay in seconds
     #[arg(short, long, default_value_t = 0)]
     from: u64,
 
-    /// Maximum amount of delay
+    /// Maximum amount of delay in seconds
     #[arg(short, long, default_value_t = 1200)]
     until: u64,
 
@@ -23,7 +23,7 @@ struct Args {
     #[arg(short='r', long="disable_random", action=ArgAction::SetFalse, default_value_t = true)]
     random: bool,
 
-    /// Delay that should be used if random is off. This is added to the length of the sound
+    /// Delay in seconds that should be used if random is off. This is added to the length of the sound
     #[arg(short, long)]
     delay: Option<u64>
 }
