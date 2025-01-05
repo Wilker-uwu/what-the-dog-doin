@@ -20,7 +20,7 @@ struct Args {
     until: u64,
 
     /// Disables random delay
-    #[arg(short='r', long="disable_random", action=ArgAction::SetFalse, default_value_t = true)]
+    #[arg(short='r', long="disable-random", action=ArgAction::SetFalse, default_value_t = true)]
     random: bool,
 
     /// Delay in seconds that should be used if random is off. This is added to the length of the sound
@@ -72,9 +72,9 @@ fn main() {
             match args.delay {
                 Some(a) => a,
                 None => {
-                    eprintln!("Delay not specified! Delay has to be specified when using --disable_random");
                     return
                 },
+                    eprintln!("Delay not specified! Delay has to be specified when using --disable-random");
             }
         };
         std::thread::sleep(Duration::from_secs(delay));
