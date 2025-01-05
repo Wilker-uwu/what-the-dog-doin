@@ -1,4 +1,3 @@
-#![feature(fs_try_exists)]
 use std::{io::BufReader, fs::{File, self}, time::Duration};
 
 use chrono::{Local, format::{DelayedFormat, StrftimeItems}};
@@ -32,7 +31,7 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    match fs::try_exists(args.file.clone()) {
+    match fs::exists(args.file.clone()) {
         Ok(b) => {
             if !b {
                 eprintln!("File doesn't exist!");
